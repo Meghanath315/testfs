@@ -1,6 +1,6 @@
 ---
 
- - host: dev
+ - hosts: dev
    tags: dev
    tasks:
    - name: pull the docker image
@@ -11,7 +11,7 @@
    - name: pull the docker image
      raw: docker run -dti --c1 -p 80:80 meghanath315/anji1:1 /bin/bash
 
- - host: qa
+ - hosts: qa
    tags: qa
    tasks:
    - name: pull the docker image
