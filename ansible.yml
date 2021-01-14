@@ -1,25 +1,25 @@
 ---
 
- - hosts: dev
+ - host: dev
    tags: dev
    tasks:
-     - name: pull the docker image
-       raw: docker pull meghanath315/anji1:1
-     - name: remove the docker container
-       raw: docker rm -f c1
-       ignore_errors: true
-     - name: pull the docker image
-       raw: docker run -dti --c1 -p 80:80 meghanath315/anji1:1 /bin/bash
+   - name: pull the docker image
+     raw: docker pull meghanath315/anji1:1
+   - name: remove the docker container
+     raw: docker rm -f c1
+     ignore_errors: true
+   - name: pull the docker image
+     raw: docker run -dti --c1 -p 80:80 meghanath315/anji1:1 /bin/bash
 
- - hosts: qa
+ - host: qa
    tags: qa
    tasks:
-     - name: pull the docker image
-       raw: docker pull meghanath315/anji1:1
-     - name: remove the docker container
-       raw: docker rm -f c1
-       ignore_errors: true
-     - name: pull the docker image
-       raw: docker run -dti --c1 -p 80:80 meghanath315/anji1:1 /bin/bash
+   - name: pull the docker image
+     raw: docker pull meghanath315/anji1:1
+   - name: remove the docker container
+     raw: docker rm -f c1
+     ignore_errors: true
+   - name: pull the docker image
+     raw: docker run -dti --c1 -p 80:80 meghanath315/anji1:1 /bin/bash
 
 
