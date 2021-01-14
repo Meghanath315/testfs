@@ -8,8 +8,8 @@
    - name: remove the docker container
      raw: docker rm -f c1
      ignore_errors: true
-   - name: pull the docker image
-     raw: docker run -dti --c1 -p 80:80 meghanath315/anji1:1 /bin/bash
+   - name: spinnup the docker container
+     raw: docker run -dti --name c1 -p 80:80 meghanath315/anji1:1 /bin/bash
 
  - hosts: qa
    tags: qa
@@ -20,6 +20,6 @@
      raw: docker rm -f c1
      ignore_errors: true
    - name: pull the docker image
-     raw: docker run -dti --c1 -p 80:80 meghanath315/anji1:1 /bin/bash
+     raw: docker run -dti --name c1 -p 80:80 meghanath315/anji1:1 /bin/bash
 
 
